@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -36,6 +37,10 @@ $colorgold: rgb(166, 114, 69);
   font-family: $fontRoboto;
   color: $colorwhite;
   text-transform: uppercase;
+}
+
+body {
+  background: $colorbackground;
 }
 
 li a {

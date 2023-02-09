@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 @font-face {
@@ -19,55 +20,59 @@
   font-family: Roboto-light;
   src: url(../fonts/Roboto-Light.ttf);
 }
+body {
+  background: rgb(33, 32, 30);
+}
+
 li a {
   text-decoration: none;
   color: rgb(238, 238, 238);
 }
 
-body {
+header {
   width: 100%;
   height: 100vh;
   background: url(../img/bg-slider-06.jpg) center/cover no-repeat;
 }
-body header {
-  height: 100vh;
-}
-body nav {
+
+nav {
   width: 90%;
   height: 50px;
   display: grid;
   grid-template-columns: 25% 50% 25%;
-  margin: 50px auto;
+  margin: 0 auto;
   align-items: center;
   margin-bottom: 200px;
 }
-body nav span {
+nav span {
   color: rgb(238, 238, 238);
   text-align: center;
   font-family: "Allura", sans-serif;
 }
-body nav span i {
+nav span i {
   margin-right: 30px;
 }
-body nav ul {
+nav ul {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
 }
-body #resto {
+
+#resto {
   font-size: 3.5rem;
   font-weight: 600;
 }
-body .header-text {
+
+.header-text {
   display: block;
   text-align: center;
 }
-body .header-text .pre-title {
+.header-text .pre-title {
   font-family: "Allura", sans-serif;
   color: rgb(166, 114, 69);
   font-size: 4rem;
 }
-body .header-text h1 {
+.header-text h1 {
   font-family: "Roboto", sans-serif;
   color: rgb(238, 238, 238);
   text-transform: uppercase;
@@ -77,11 +82,11 @@ body .header-text h1 {
   align-items: center;
   margin-bottom: 30px;
 }
-body .header-text img {
+.header-text img {
   display: block;
   margin: 0 auto;
 }
-body .header-text p {
+.header-text p {
   text-transform: uppercase;
   color: rgb(238, 238, 238);
   font-family: "roboto-light", sans-serif;
@@ -96,10 +101,11 @@ body .header-text p {
   display: grid;
   grid-template-columns: 50% 50%;
   align-items: center;
+  background: rgb(238, 238, 238);
 }
 .first-section .left-part-container {
   width: 95%;
-  height: 95%;
+  height: 90%;
   border: 1px dashed rgb(166, 114, 69);
   margin: 0 auto;
   display: flex;
@@ -111,7 +117,7 @@ body .header-text p {
 .first-section .left-part-container .pre-title {
   font-family: "Allura", sans-serif;
   color: rgb(166, 114, 69);
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 .first-section .left-part-container .title {
   font-family: "Roboto", sans-serif;
@@ -150,5 +156,374 @@ body .header-text p {
 }
 
 #menu-container {
+  height: 130vh;
+  background: url(../img/bg-menu-01.jpg) no-repeat;
+  background-position: bottom;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#menu-container .menu-part {
+  text-align: center;
+  width: 55%;
+  margin-top: -100px;
+}
+#menu-container .menu-part .pre-title {
+  display: block;
+  font-family: "Allura", sans-serif;
+  color: rgb(166, 114, 69);
+  font-size: 3rem;
+  margin-bottom: 30px;
+}
+#menu-container .menu-part ul {
+  display: flex;
+  justify-content: space-around;
+  font-family: "Poppins", serif;
+  font-size: 0.8rem;
+  list-style-type: none;
+  margin: 30px 0 40px;
+}
+#menu-container .menu-part ul li {
+  position: relative;
+}
+#menu-container .menu-part ul li a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: rgb(238, 238, 238);
+  left: 0%;
+  transform: translateX(-50%);
+  transform: translateY(30px);
+}
+#menu-container .menu-part .menu {
+  border-top: 5px solid rgb(166, 114, 69);
+  background: rgb(238, 238, 238);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding-bottom: 30px;
+  height: 80vh;
+}
+#menu-container .menu-part .menu .plat {
+  display: grid;
+  grid-template-columns: 25% 65% 10%;
+  padding: 30px 10px;
+  border-bottom: 1px dashed grey;
+  margin: 0 20px;
+}
+#menu-container .menu-part .menu .plat img {
+  border-radius: 150px;
+}
+#menu-container .menu-part .menu .plat .description-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  padding: 0 5px;
+  font-family: "Poppins", serif;
+  font-size: 0.8rem;
+}
+#menu-container .menu-part .menu .plat .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: rgb(166, 114, 69);
+  font-size: 1.3rem;
+}
+
+#reservation {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  width: 60%;
+  margin: 100px auto;
+  height: 70vh;
+  font-family: "roboto-light", sans-serif;
+}
+#reservation .pre-title {
+  font-family: "Allura", sans-serif;
+  color: rgb(166, 114, 69);
+  font-size: 3rem;
+}
+#reservation .title {
+  font-family: "Roboto", sans-serif;
+  color: rgb(238, 238, 238);
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+#reservation img {
+  margin: 30px 0 40px;
+}
+#reservation .reservation-left-container {
+  background: black;
+  color: rgb(238, 238, 238);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#reservation .reservation-left-container .reservation-left {
+  border: 1px dashed rgb(238, 238, 238);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 90%;
+}
+#reservation .reservation-left-container .reservation-left .open-day {
+  text-transform: uppercase;
+  color: rgb(166, 114, 69);
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin-bottom: 25px;
+}
+#reservation .reservation-left-container .reservation-left p {
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+}
+#reservation .reservation-left-container .reservation-left .open-tel {
+  font-family: "Roboto", sans-serif;
+  color: rgb(166, 114, 69);
+  font-size: 1.3rem;
+}
+#reservation .reservation-right-container {
+  background: rgb(238, 238, 238);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#reservation .reservation-right-container .title {
+  color: black;
+}
+#reservation .reservation-right-container .array {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 80%;
+  margin-bottom: 50px;
+}
+#reservation .reservation-right-container .array select,
+#reservation .reservation-right-container .array input {
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  background: none;
+  border-bottom: 1px solid rgb(184, 179, 179);
+}
+#reservation .reservation-right-container input[type=submit] {
+  border: 1px solid black;
+  border-radius: 100px;
+  padding: 20px;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.9rem;
   background: rgb(33, 32, 30);
+  color: rgb(238, 238, 238);
+  cursor: pointer;
+}
+
+.event {
+  text-align: center;
+  height: 100vh;
+  width: 60%;
+  margin: 0 auto;
+}
+.event .pre-title {
+  font-family: "Allura", sans-serif;
+  color: rgb(166, 114, 69);
+  font-size: 3rem;
+}
+.event .title {
+  font-family: "Roboto", sans-serif;
+  color: rgb(238, 238, 238);
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+.event h3 {
+  font-family: "roboto-light", sans-serif;
+  letter-spacing: 3px;
+  font-size: 2rem;
+  color: rgb(33, 32, 30);
+}
+.event .location {
+  color: grey;
+  font-family: "roboto-light", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  margin: 40px 0;
+}
+.event p {
+  color: rgb(33, 32, 30);
+  font-family: "roboto-light", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  letter-spacing: 3px;
+}
+.event img {
+  margin: 30px 0 40px;
+}
+.event .event-container {
+  width: 98%;
+  height: 70%;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "to rig" "bot rig";
+  gap: 35px;
+}
+.event .event-container .event-top {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  grid-area: to;
+}
+.event .event-container .event-top .event-left-part {
+  height: 100%;
+  width: 100%;
+  background: url(../img/event-01.jpg) center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.event .event-container .event-top .event-left-part .event-left-part-center {
+  padding: 10px 30px;
+  background: rgb(33, 32, 30);
+  color: rgb(238, 238, 238);
+  font-family: "Poppins", serif;
+  font-size: 1.5rem;
+}
+.event .event-container .event-top .event-left-part .event-left-part-center .numdate {
+  font-size: 3rem;
+}
+.event .event-container .event-top .event-left-part-right {
+  background: rgb(238, 238, 238);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 50px;
+}
+.event .event-container .event-bottom {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  grid-area: bot;
+}
+.event .event-container .event-bottom .event-bottom-part {
+  height: 100%;
+  width: 100%;
+  background: url(../img/event-02.jpg) center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.event .event-container .event-bottom .event-bottom-part .event-bottom-part-center {
+  padding: 10px 30px;
+  background: rgb(33, 32, 30);
+  color: rgb(238, 238, 238);
+  font-family: "Poppins", serif;
+  font-size: 1.5rem;
+}
+.event .event-container .event-bottom .event-bottom-part .event-bottom-part-center .numdate {
+  font-size: 3rem;
+}
+.event .event-container .event-bottom .event-bottom-part-right {
+  background: rgb(238, 238, 238);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 50px;
+}
+.event .event-container .event-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: rig;
+  background: url(../img/event-03.jpg) center/cover;
+}
+.event .event-container .event-right .event-right-part-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  height: 85%;
+  background: rgb(238, 238, 238);
+  position: relative;
+}
+.event .event-container .event-right .event-right-part-container .event-right-part-container-center {
+  background: rgb(33, 32, 30);
+  color: rgb(238, 238, 238);
+  font-family: "Poppins", serif;
+  font-size: 1.5rem;
+  padding: 10px 30px;
+  position: absolute;
+  top: 0;
+}
+.event .event-container .event-right .event-right-part-container .event-right-part-container-center .numdate {
+  font-size: 3rem;
+}
+
+footer {
+  border: 1px solid green;
+  height: 120vh;
+  display: grid;
+  grid-template-rows: 30% 40% 30%;
+  position: relative;
+}
+footer .footer-text {
+  position: relative;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgb(238, 238, 238);
+  width: 60%;
+  height: 30%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+footer .footer-text p {
+  margin: 50px 100px 80px;
+  text-align: center;
+  color: rgb(33, 32, 30);
+}
+footer .footer-text span {
+  margin-bottom: 20px;
+}
+footer .footer-text .namefooter {
+  font-family: "roboto-light", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+footer .footer-text .ceofooter {
+  color: rgb(166, 114, 69);
+  font-family: "roboto-light", sans-serif;
+}
+footer .footer-text img {
+  border-radius: 100px;
+  width: 10%;
+  position: absolute;
+  top: -50px;
+}
+footer .carto {
+  background: url(../img/gmap.jpg) center/cover;
+}
+footer .footer-final {
+  background: url(../img/bg-footer.jpg) center/cover;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }/*# sourceMappingURL=index.css.map */

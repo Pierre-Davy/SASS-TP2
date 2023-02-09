@@ -1,0 +1,56 @@
+footer {
+  border: 1px solid green;
+  height: 120vh;
+  display: grid;
+  grid-template-rows: 30% 40% 30%;
+  position: relative;
+
+  .footer-text {
+    position: relative;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: $colorwhite;
+    width: 60%;
+    height: 30%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    p {
+      margin: 50px 100px 80px;
+      text-align: center;
+      color: $colorbackground;
+    }
+    span {
+      margin-bottom: 20px;
+    }
+    .namefooter {
+      font-family: $fontRoboto-light;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    .ceofooter {
+      color: $colorgold;
+      font-family: $fontRoboto-light;
+    }
+    img {
+      border-radius: 100px;
+      width: 10%;
+      position: absolute;
+      top: -50px;
+    }
+  }
+
+  .carto {
+    background: url(../img/gmap.jpg) center/cover;
+  }
+  .footer-final {
+    background: url(../img/bg-footer.jpg) center/cover;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
