@@ -12,6 +12,9 @@ nav {
   margin: 0 auto;
   align-items: center;
   margin-bottom: 200px;
+  @media screen and (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   span {
     color: $colorwhite;
@@ -27,6 +30,15 @@ nav {
     display: flex;
     justify-content: space-between;
     text-transform: uppercase;
+    @media screen and (max-width: 900px) {
+      display: none;
+    }
+
+    a {
+      @media screen and (max-width: 1150px) {
+        font-size: 0.7rem;
+      }
+    }
   }
 }
 #resto {
@@ -47,9 +59,11 @@ nav {
     font-size: 5rem;
     font-weight: 800;
     letter-spacing: 8px;
-
     align-items: center;
     margin-bottom: 30px;
+    @media screen and (max-width: 700px) {
+      font-size: 3rem;
+    }
   }
 
   img {

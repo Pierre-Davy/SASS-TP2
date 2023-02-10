@@ -44,6 +44,11 @@ nav {
   align-items: center;
   margin-bottom: 200px;
 }
+@media screen and (max-width: 900px) {
+  nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 nav span {
   color: rgb(238, 238, 238);
   text-align: center;
@@ -56,6 +61,16 @@ nav ul {
   display: flex;
   justify-content: space-between;
   text-transform: uppercase;
+}
+@media screen and (max-width: 900px) {
+  nav ul {
+    display: none;
+  }
+}
+@media screen and (max-width: 1150px) {
+  nav ul a {
+    font-size: 0.7rem;
+  }
 }
 
 #resto {
@@ -82,6 +97,11 @@ nav ul {
   align-items: center;
   margin-bottom: 30px;
 }
+@media screen and (max-width: 700px) {
+  .header-text h1 {
+    font-size: 3rem;
+  }
+}
 .header-text img {
   display: block;
   margin: 0 auto;
@@ -102,6 +122,11 @@ nav ul {
   grid-template-columns: 50% 50%;
   align-items: center;
   background: rgb(238, 238, 238);
+}
+@media screen and (max-width: 600px) {
+  .first-section {
+    grid-template-columns: 1fr;
+  }
 }
 .first-section .left-part-container {
   width: 95%;
@@ -154,6 +179,11 @@ nav ul {
   width: 100%;
   height: 100%;
 }
+@media screen and (max-width: 600px) {
+  .first-section .right-part-container {
+    display: none;
+  }
+}
 
 #menu-container {
   height: 130vh;
@@ -163,10 +193,31 @@ nav ul {
   justify-content: center;
   align-items: center;
 }
+@media screen and (max-width: 650px) {
+  #menu-container {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
 #menu-container .menu-part {
   text-align: center;
-  width: 55%;
+  width: 70%;
   margin-top: -100px;
+}
+@media screen and (max-width: 1100px) {
+  #menu-container .menu-part {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 800px) {
+  #menu-container .menu-part {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 650px) {
+  #menu-container .menu-part {
+    margin-top: 50px;
+  }
 }
 #menu-container .menu-part .pre-title {
   display: block;
@@ -202,16 +253,23 @@ nav ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   padding-bottom: 30px;
-  height: 80vh;
+  width: 100%;
+}
+@media screen and (max-width: 600px) {
+  #menu-container .menu-part .menu {
+    grid-template-columns: 1fr;
+  }
 }
 #menu-container .menu-part .menu .plat {
+  height: 150px;
   display: grid;
-  grid-template-columns: 25% 65% 10%;
-  padding: 30px 10px;
+  grid-template-columns: 20% 65% 15%;
+  padding: 30px 0px;
   border-bottom: 1px dashed grey;
   margin: 0 20px;
 }
 #menu-container .menu-part .menu .plat img {
+  width: 100%;
   border-radius: 150px;
 }
 #menu-container .menu-part .menu .plat .description-menu {
@@ -223,6 +281,11 @@ nav ul {
   padding: 0 5px;
   font-family: "Poppins", serif;
   font-size: 0.8rem;
+}
+@media screen and (max-width: 800px) {
+  #menu-container .menu-part .menu .plat .description-menu {
+    font-size: 0.7rem;
+  }
 }
 #menu-container .menu-part .menu .plat .price {
   display: flex;
@@ -236,10 +299,14 @@ nav ul {
 #reservation {
   display: grid;
   grid-template-columns: 35% 65%;
-  width: 60%;
+  width: 70%;
   margin: 100px auto;
-  height: 70vh;
   font-family: "roboto-light", sans-serif;
+}
+@media screen and (max-width: 1000px) {
+  #reservation {
+    grid-template-columns: 1fr;
+  }
 }
 #reservation .pre-title {
   font-family: "Allura", sans-serif;
@@ -256,6 +323,7 @@ nav ul {
   margin: 30px 0 40px;
 }
 #reservation .reservation-left-container {
+  min-height: 500px;
   background: black;
   color: rgb(238, 238, 238);
   text-align: center;
@@ -272,18 +340,19 @@ nav ul {
   justify-content: center;
   align-items: center;
   width: 90%;
-  height: 90%;
+  height: auto;
+  margin: 10px;
 }
 #reservation .reservation-left-container .reservation-left .open-day {
   text-transform: uppercase;
   color: rgb(166, 114, 69);
   font-size: 1.3rem;
   letter-spacing: 2px;
-  margin-bottom: 25px;
+  margin-bottom: 5%;
 }
 #reservation .reservation-left-container .reservation-left p {
-  margin-bottom: 50px;
   letter-spacing: 1px;
+  margin-bottom: 10%;
 }
 #reservation .reservation-left-container .reservation-left .open-tel {
   font-family: "Roboto", sans-serif;
@@ -291,6 +360,7 @@ nav ul {
   font-size: 1.3rem;
 }
 #reservation .reservation-right-container {
+  max-width: 670px;
   background: rgb(238, 238, 238);
   text-align: center;
   display: flex;
@@ -302,14 +372,15 @@ nav ul {
   color: black;
 }
 #reservation .reservation-right-container .array {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  width: 100%;
   margin-bottom: 50px;
 }
 #reservation .reservation-right-container .array select,
 #reservation .reservation-right-container .array input {
+  width: 150px;
   padding: 10px;
   margin: 10px;
   border: none;
@@ -320,6 +391,7 @@ nav ul {
   border: 1px solid black;
   border-radius: 100px;
   padding: 20px;
+  margin-bottom: 20px;
   text-transform: uppercase;
   font-family: "Roboto", sans-serif;
   font-size: 0.9rem;
@@ -331,8 +403,14 @@ nav ul {
 .event {
   text-align: center;
   height: 100vh;
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
+}
+@media screen and (max-width: 850px) {
+  .event {
+    width: 90%;
+    height: auto;
+  }
 }
 .event .pre-title {
   font-family: "Allura", sans-serif;
@@ -348,23 +426,41 @@ nav ul {
 .event h3 {
   font-family: "roboto-light", sans-serif;
   letter-spacing: 3px;
-  font-size: 2rem;
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 5px grey;
   color: rgb(33, 32, 30);
 }
+@media screen and (max-width: 800px) {
+  .event h3 {
+    font-size: 1rem;
+  }
+}
 .event .location {
+  display: flex;
+  flex-direction: column;
   color: grey;
   font-family: "roboto-light", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   letter-spacing: 3px;
   margin: 40px 0;
+}
+@media screen and (max-width: 800px) {
+  .event .location {
+    font-size: 1rem;
+  }
 }
 .event p {
   color: rgb(33, 32, 30);
   font-family: "roboto-light", sans-serif;
   font-weight: 600;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1rem;
   letter-spacing: 3px;
+}
+@media screen and (max-width: 800px) {
+  .event p {
+    font-size: 0.7rem;
+  }
 }
 .event img {
   margin: 30px 0 40px;
@@ -378,11 +474,21 @@ nav ul {
   grid-template-areas: "to rig" "bot rig";
   gap: 35px;
 }
+@media screen and (max-width: 650px) {
+  .event .event-container {
+    display: inline-block;
+  }
+}
 .event .event-container .event-top {
   display: grid;
   grid-template-columns: 40% 60%;
   align-items: center;
   grid-area: to;
+}
+@media screen and (max-width: 650px) {
+  .event .event-container .event-top {
+    margin-bottom: 10px;
+  }
 }
 .event .event-container .event-top .event-left-part {
   height: 100%;
@@ -399,8 +505,18 @@ nav ul {
   font-family: "Poppins", serif;
   font-size: 1.5rem;
 }
+@media screen and (max-width: 800px) {
+  .event .event-container .event-top .event-left-part .event-left-part-center {
+    font-size: 1.2rem;
+  }
+}
 .event .event-container .event-top .event-left-part .event-left-part-center .numdate {
   font-size: 3rem;
+}
+@media screen and (max-width: 800px) {
+  .event .event-container .event-top .event-left-part .event-left-part-center .numdate {
+    font-size: 2rem;
+  }
 }
 .event .event-container .event-top .event-left-part-right {
   background: rgb(238, 238, 238);
@@ -408,14 +524,18 @@ nav ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  padding-left: 50px;
+  align-items: center;
 }
 .event .event-container .event-bottom {
   display: grid;
   grid-template-columns: 40% 60%;
   align-items: center;
   grid-area: bot;
+}
+@media screen and (max-width: 650px) {
+  .event .event-container .event-bottom {
+    margin-bottom: 10px;
+  }
 }
 .event .event-container .event-bottom .event-bottom-part {
   height: 100%;
@@ -432,8 +552,18 @@ nav ul {
   font-family: "Poppins", serif;
   font-size: 1.5rem;
 }
+@media screen and (max-width: 800px) {
+  .event .event-container .event-bottom .event-bottom-part .event-bottom-part-center {
+    font-size: 1.2rem;
+  }
+}
 .event .event-container .event-bottom .event-bottom-part .event-bottom-part-center .numdate {
   font-size: 3rem;
+}
+@media screen and (max-width: 800px) {
+  .event .event-container .event-bottom .event-bottom-part .event-bottom-part-center .numdate {
+    font-size: 2rem;
+  }
 }
 .event .event-container .event-bottom .event-bottom-part-right {
   background: rgb(238, 238, 238);
@@ -441,8 +571,7 @@ nav ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
-  padding-left: 50px;
+  align-items: center;
 }
 .event .event-container .event-right {
   display: flex;
@@ -451,10 +580,15 @@ nav ul {
   grid-area: rig;
   background: url(../img/event-03.jpg) center/cover;
 }
+@media screen and (max-width: 650px) {
+  .event .event-container .event-right {
+    height: 500px;
+  }
+}
 .event .event-container .event-right .event-right-part-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   width: 85%;
   height: 85%;
@@ -470,12 +604,25 @@ nav ul {
   position: absolute;
   top: 0;
 }
+@media screen and (max-width: 800px) {
+  .event .event-container .event-right .event-right-part-container .event-right-part-container-center {
+    font-size: 1.2rem;
+  }
+}
 .event .event-container .event-right .event-right-part-container .event-right-part-container-center .numdate {
   font-size: 3rem;
 }
+@media screen and (max-width: 800px) {
+  .event .event-container .event-right .event-right-part-container .event-right-part-container-center .numdate {
+    font-size: 2rem;
+  }
+}
+.event .event-container .event-right .event-right-part-container .event-right-part-text {
+  position: absolute;
+  top: 150px;
+}
 
 footer {
-  border: 1px solid green;
   height: 120vh;
   display: grid;
   grid-template-rows: 30% 40% 30%;
@@ -496,10 +643,25 @@ footer .footer-text {
   align-items: center;
   margin-top: 150px;
 }
+@media screen and (max-width: 1000px) {
+  footer .footer-text {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 400px) {
+  footer .footer-text {
+    height: 40%;
+  }
+}
 footer .footer-text p {
   margin: 50px 100px 80px;
   text-align: center;
   color: rgb(33, 32, 30);
+}
+@media screen and (max-width: 700px) {
+  footer .footer-text p {
+    margin: 50px 20px 30px;
+  }
 }
 footer .footer-text span {
   margin-bottom: 20px;
@@ -515,7 +677,7 @@ footer .footer-text .ceofooter {
 }
 footer .footer-text img {
   border-radius: 100px;
-  width: 10%;
+  width: 80px;
   position: absolute;
   top: -50px;
 }
@@ -526,4 +688,82 @@ footer .footer-final {
   background: url(../img/bg-footer.jpg) center/cover;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+}
+@media screen and (max-width: 900px) {
+  footer .footer-final {
+    background: rgb(33, 32, 30);
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+footer .footer-final .petitmot .align-text {
+  width: 60%;
+  height: 60%;
+  margin: 40px auto auto 30%;
+}
+@media screen and (max-width: 900px) {
+  footer .footer-final .petitmot .align-text {
+    display: none;
+  }
+}
+footer .footer-final .petitmot .align-text h3 {
+  font-family: "Allura", sans-serif;
+  color: rgb(166, 114, 69);
+  font-size: 3rem;
+  font-weight: normal;
+}
+footer .footer-final .petitmot .align-text p {
+  font-family: "roboto-light", sans-serif;
+  line-height: 40px;
+  color: rgb(238, 238, 238);
+}
+footer .footer-final .newsletter {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  color: rgb(238, 238, 238);
+}
+footer .footer-final .newsletter .news {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 50px;
+}
+@media screen and (max-width: 400px) {
+  footer .footer-final .newsletter .news {
+    margin-left: 20px;
+  }
+}
+footer .footer-final .newsletter .news h3 {
+  text-transform: uppercase;
+  font-family: "roboto-light", sans-serif;
+}
+footer .footer-final .newsletter .news input {
+  background: none;
+  color: rgb(238, 238, 238);
+  border: 1px solid grey;
+  padding: 10px 30px;
+  margin-top: 15px;
+}
+footer .footer-final .newsletter .news input:focus {
+  background: rgb(238, 238, 238);
+  color: rgb(33, 32, 30);
+}
+footer .footer-final .newsletter .follow {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 50px;
+}
+@media screen and (max-width: 400px) {
+  footer .footer-final .newsletter .follow {
+    margin-left: 20px;
+  }
+}
+footer .footer-final .newsletter .follow h3 {
+  text-transform: uppercase;
+  font-family: "roboto-light", sans-serif;
+}
+footer .footer-final .newsletter .follow i {
+  margin-left: 30px;
+  color: grey;
 }/*# sourceMappingURL=index.css.map */

@@ -1,8 +1,12 @@
 .event {
   text-align: center;
   height: 100vh;
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
+  @media screen and (max-width: 850px) {
+    width: 90%;
+    height: auto;
+  }
 
   .pre-title {
     @include pre-title;
@@ -16,23 +20,36 @@
   h3 {
     font-family: $fontRoboto-light;
     letter-spacing: 3px;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 5px grey;
     color: $colorbackground;
+    @media screen and (max-width: 800px) {
+      font-size: 1rem;
+    }
   }
   .location {
+    display: flex;
+    flex-direction: column;
+
     color: grey;
     font-family: $fontRoboto-light;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 3px;
     margin: 40px 0;
+    @media screen and (max-width: 800px) {
+      font-size: 1rem;
+    }
   }
   p {
     color: $colorbackground;
     font-family: $fontRoboto-light;
     font-weight: 600;
     text-transform: uppercase;
-    font-size: 1.3rem;
+    font-size: 1rem;
     letter-spacing: 3px;
+    @media screen and (max-width: 800px) {
+      font-size: 0.7rem;
+    }
   }
 
   img {
@@ -49,12 +66,18 @@
       "to rig"
       "bot rig";
     gap: 35px;
+    @media screen and (max-width: 650px) {
+      display: inline-block;
+    }
 
     .event-top {
       display: grid;
       grid-template-columns: 40% 60%;
       align-items: center;
       grid-area: to;
+      @media screen and (max-width: 650px) {
+        margin-bottom: 10px;
+      }
 
       .event-left-part {
         height: 100%;
@@ -70,9 +93,15 @@
           color: $colorwhite;
           font-family: $fontPoppins;
           font-size: 1.5rem;
+          @media screen and (max-width: 800px) {
+            font-size: 1.2rem;
+          }
 
           .numdate {
             font-size: 3rem;
+            @media screen and (max-width: 800px) {
+              font-size: 2rem;
+            }
           }
         }
       }
@@ -82,8 +111,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
-        padding-left: 50px;
+        align-items: center;
       }
     }
     .event-bottom {
@@ -91,6 +119,9 @@
       grid-template-columns: 40% 60%;
       align-items: center;
       grid-area: bot;
+      @media screen and (max-width: 650px) {
+        margin-bottom: 10px;
+      }
 
       .event-bottom-part {
         height: 100%;
@@ -106,9 +137,15 @@
           color: $colorwhite;
           font-family: $fontPoppins;
           font-size: 1.5rem;
+          @media screen and (max-width: 800px) {
+            font-size: 1.2rem;
+          }
 
           .numdate {
             font-size: 3rem;
+            @media screen and (max-width: 800px) {
+              font-size: 2rem;
+            }
           }
         }
       }
@@ -118,8 +155,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
-        padding-left: 50px;
+        align-items: center;
       }
     }
     .event-right {
@@ -128,11 +164,14 @@
       align-items: center;
       grid-area: rig;
       background: url(../img/event-03.jpg) center/cover;
+      @media screen and (max-width: 650px) {
+        height: 500px;
+      }
 
       .event-right-part-container {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         width: 85%;
         height: 85%;
@@ -147,10 +186,21 @@
           padding: 10px 30px;
           position: absolute;
           top: 0;
+          @media screen and (max-width: 800px) {
+            font-size: 1.2rem;
+          }
 
           .numdate {
             font-size: 3rem;
+            @media screen and (max-width: 800px) {
+              font-size: 2rem;
+            }
           }
+        }
+
+        .event-right-part-text {
+          position: absolute;
+          top: 150px;
         }
       }
     }
