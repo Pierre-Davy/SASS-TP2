@@ -130,6 +130,10 @@ footer {
         i {
           margin-left: 30px;
           color: grey;
+          &:hover {
+            transform: scale(1.2);
+            color: $colorwhite;
+          }
         }
       }
     }

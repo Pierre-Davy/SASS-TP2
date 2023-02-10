@@ -40,6 +40,10 @@
       li {
         position: relative;
 
+        &:hover {
+          transform: scale(1.1);
+        }
+
         a::after {
           content: "";
           position: absolute;

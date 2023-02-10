@@ -88,6 +88,12 @@
         background: none;
         border-bottom: 1px solid rgb(184, 179, 179);
       }
+
+      select,
+      input[type="time"],
+      input[type="date"]:hover {
+        cursor: pointer;
+      }
     }
 
     input[type="submit"] {
@@ -101,6 +107,9 @@
       background: $colorbackground;
       color: $colorwhite;
       cursor: pointer;
+      &:hover {
+        transform: scale(1.05);
+      }
     }
   }
 }
