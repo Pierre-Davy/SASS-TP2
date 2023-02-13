@@ -61,6 +61,10 @@ nav span i {
 nav span i:hover {
   transform: scale(1.2);
 }
+nav span i:active {
+  transition: 0.1s ease;
+  transform: scale(1);
+}
 nav ul {
   display: flex;
   justify-content: space-between;
@@ -73,6 +77,10 @@ nav ul {
 }
 nav ul li {
   position: relative;
+}
+nav ul li:active {
+  transition: 0.1s ease;
+  transform: scale(1.1);
 }
 nav ul li:hover a::after {
   content: "";
@@ -256,6 +264,10 @@ nav ul li:hover a::after {
 #menu-container .menu-part ul li:hover {
   transform: scale(1.1);
 }
+#menu-container .menu-part ul li:active {
+  transition: 0.1s ease;
+  transform: scale(1);
+}
 #menu-container .menu-part ul li a::after {
   content: "";
   position: absolute;
@@ -425,6 +437,10 @@ nav ul li:hover a::after {
 }
 #reservation .reservation-right-container input[type=submit]:hover {
   transform: scale(1.05);
+}
+#reservation .reservation-right-container input[type=submit]:active {
+  transition: 0.1s ease;
+  transform: scale(1);
 }
 
 .event {
@@ -797,4 +813,8 @@ footer .footer-final .newsletter .follow i {
 footer .footer-final .newsletter .follow i:hover {
   transform: scale(1.2);
   color: rgb(238, 238, 238);
+}
+footer .footer-final .newsletter .follow i:active {
+  transition: 0.1s ease;
+  transform: scale(1);
 }/*# sourceMappingURL=index.css.map */

@@ -27,6 +27,10 @@ nav {
       &:hover {
         transform: scale(1.2);
       }
+      &:active {
+        transition: 0.1s ease;
+        transform: scale(1);
+      }
     }
   }
 
@@ -40,6 +44,10 @@ nav {
 
     li {
       position: relative;
+      &:active {
+        transition: 0.1s ease;
+        transform: scale(1.1);
+      }
     }
 
     li:hover {

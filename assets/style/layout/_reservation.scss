@@ -110,6 +110,10 @@
       &:hover {
         transform: scale(1.05);
       }
+      &:active {
+        transition: 0.1s ease;
+        transform: scale(1);
+      }
     }
   }
 }

@@ -134,6 +134,10 @@ footer {
             transform: scale(1.2);
             color: $colorwhite;
           }
+          &:active {
+            transition: 0.1s ease;
+            transform: scale(1);
+          }
         }
       }
     }
